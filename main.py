@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-f = open("./report.2010-09-28_1407CEST.txt", 'r')
+f = open("report.2010-11-23_1541CET_tram_ljabru_to_jernbanetorget.txt", 'r')
 # 456개
 
 timestamp = []
@@ -19,6 +19,8 @@ while True:
 
     # print(timestamp, ", ", throughput)
 plt.plot(timestamp,throughput)
+plt.xlabel('timestamp (s)')
+plt.ylabel('throughput (Mbps)')
 plt.show()
 f.close()
 
